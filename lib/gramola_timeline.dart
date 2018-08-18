@@ -11,7 +11,6 @@ import 'package:http/http.dart' as http;
 import 'package:gramola_timeline/model/timeline_entry.dart';
 
 import 'package:gramola_timeline/config/stores.dart';
-import 'package:gramola_timeline/config/connections.dart';
 
 import 'package:gramola_timeline/timeline_entry_row.dart';
 
@@ -66,7 +65,7 @@ class _EventsComponentState extends State<EventTimelineComponent>
     try {
       //setConfiguration(this._configuration);
       fetchTimelineEntriesRequestAction('');
-      dynamic response = await http.get(Connections.timelineApi + "/" + this._configuration.eventId + "/" + this._configuration.userId);
+      dynamic response = await http.get(this._configuration.timelineApi + "/" + this._configuration.eventId + "/" + this._configuration.userId);
       print("Response status: ${response.statusCode}");
       if (response.statusCode == 200) {
         List<TimelineEntry> timelineEntries = (json.decode(response.body) as List).map((e) => new TimelineEntry.fromJson(e)).toList();

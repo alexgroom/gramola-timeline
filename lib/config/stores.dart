@@ -5,9 +5,10 @@ import 'package:gramola_timeline/model/timeline_entry.dart';
 class TimelineConfiguration {
   final String eventId;
   final String userId;
+  final String timelineApi;
   final String imagesBaseUrl;
 
-  const TimelineConfiguration({this.eventId, this.userId, this.imagesBaseUrl});
+  const TimelineConfiguration({this.eventId, this.userId, this.timelineApi, this.imagesBaseUrl});
 
 }
 
