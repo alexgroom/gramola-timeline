@@ -114,8 +114,10 @@ class _MyHomePageState extends State<MyHomePage> {
                             new TimelineConfiguration(
                               eventId: _eventIdFieldController.text, 
                               userId: _userIdFieldController.text, 
-                              timelineApi: 'http://timeline-gramola-cicd.apps.192.168.50.100.nip.io/api/timeline',
-                              imagesBaseUrl: 'http://files-gramola-cicd.apps.192.168.50.100.nip.io/api/files'
+                              //timelineApi: 'http://timeline-gramola-cicd.apps.192.168.50.100.nip.io/api/timeline',
+                              //imagesBaseUrl: 'http://files-gramola-cicd.apps.192.168.50.100.nip.io/api/files'
+                              timelineApi: 'http://localhost:8001/api/timeline',
+                              imagesBaseUrl: 'http://localhost:8001/api/files'
                             )
                           )
                         ),
