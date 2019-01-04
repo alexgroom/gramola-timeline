@@ -9,7 +9,7 @@ dependencies:
     sdk: flutter
 
   # HTTP REST
-  http: ^0.11.3
+  http: ^0.11.3+16
 
   # Redux
   flutter_flux:
